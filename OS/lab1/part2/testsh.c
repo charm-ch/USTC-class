@@ -194,7 +194,7 @@ void t0(int *ok){
     char cmd[64];
     strcpy(cmd, "kill ");
     strcpy(cmd + strlen(cmd), new_itoa(pid,str_pid));
-    strcpy(cmd + strlen(cmd), " 9 \n");
+    strcpy(cmd + strlen(cmd), " 15 \n");
     if(one(cmd, "", 1 , 1) == 0){
       printf("FAIL\n");
       *ok = 0;
