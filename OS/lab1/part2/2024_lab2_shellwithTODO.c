@@ -69,15 +69,49 @@ int exec_builtin(int argc, char**argv, int *fd) {
     /* TODO: 添加和实现内置指令 */
 
     if (strcmp(argv[0], "cd") == 0) {
-        
+        if (argc != 2) {  // 检查输入
+            fprintf(stderr, "Usage: cd <directory>\n");  
+            return -1;  
+        }  
+        if (chdir(argv[1]) != 0) {  // chdir调用成功返回0
+            perror("cd failed");  
+            return -1;  
+        }  
+        return 0;
     } else if (strcmp(argv[0], "exit") == 0){
-       
+        exit(0);  
+        return 0;
     }else if(strcmp(argv[0], "kill") == 0){
         if (argc < 2) {
             fprintf(stderr, "Usage: kill pid [signal]\n");
             return -1;
         }
         
+        // 解析 PID
+        char *endptr;  
+        pid_t pid = (pid_t) strtol(argv[1], &endptr, 10);  
+        if (*endptr != '\0') {  
+            fprintf(stderr, "Invalid PID: %s\n", argv[1]);  
+            return -1;  
+        }  
+
+        // 解析信号
+        int sig = SIGTERM;  // 默认信号为 SIGTERM（正常退出）
+        if (argc >= 3) {
+            sig = strtol(argv[2], &endptr, 10);
+            if (*endptr != '\0') {
+                fprintf(stderr, "Invalid signal: %s\n", argv[2]);
+                return -1;
+            }
+        }
+    
+        // 系统调用kill
+        if (kill(pid, sig) != 0) {
+            perror("kill failed");
+            return -1;
+        }
+        return 0;
+
     }else {
         // 不是内置指令时
         return -1;
@@ -96,50 +130,50 @@ int exec_builtin(int argc, char**argv, int *fd) {
         int, 返回处理过重定向后命令的参数个数
 */
 
-int process_redirect(int argc, char** argv, int *fd) {
-    /* 默认输入输出到命令行，即输入STDIN_FILENO，输出STDOUT_FILENO */
-    fd[READ_END] = STDIN_FILENO;
-    fd[WRITE_END] = STDOUT_FILENO;
-    int i = 0, j = 0;
-    while(i < argc) {
-        int tfd;
-        if(strcmp(argv[i], ">") == 0) {
-            //TODO: 打开输出文件从头写入
-            tfd = open();
-            if(tfd < 0) {
-                printf("open '%s' error: %s\n", argv[i+1], strerror(errno));
-            } else {
-                //TODO: 输出重定向
-                fd[] = tfd;
-            }
-            i += 2;
-        } else if(strcmp(argv[i], ">>") == 0) {
-            //TODO: 打开输出文件追加写入
-            tfd = open();
-            if(tfd < 0) {
-                printf("open '%s' error: %s\n", argv[i+1], strerror(errno));
-            } else {
-                //TODO:输出重定向
-                fd[] = tfd;
-            }
-            i += 2;
-        } else if(strcmp(argv[i], "<") == 0) {
-            //TODO: 读输入文件
-            tfd = open();
-            if(tfd < 0) {
-                printf("open '%s' error: %s\n", argv[i+1], strerror(errno));
-            } else {
-                //TODO:输出重定向
-                fd[] = tfd;
-            }
-            i += 2;
-        } else {
-            argv[j++] = argv[i++];
-        }
-    }
-    argv[j] = NULL;
-    return j;   // 新的argc
-}
+// int process_redirect(int argc, char** argv, int *fd) {
+//     /* 默认输入输出到命令行，即输入STDIN_FILENO，输出STDOUT_FILENO */
+//     fd[READ_END] = STDIN_FILENO;
+//     fd[WRITE_END] = STDOUT_FILENO;
+//     int i = 0, j = 0;
+//     while(i < argc) {
+//         int tfd;
+//         if(strcmp(argv[i], ">") == 0) {
+//             //TODO: 打开输出文件从头写入
+//             tfd = open();
+//             if(tfd < 0) {
+//                 printf("open '%s' error: %s\n", argv[i+1], strerror(errno));
+//             } else {
+//                 //TODO: 输出重定向
+//                 fd[] = tfd;
+//             }
+//             i += 2;
+//         } else if(strcmp(argv[i], ">>") == 0) {
+//             //TODO: 打开输出文件追加写入
+//             tfd = open();
+//             if(tfd < 0) {
+//                 printf("open '%s' error: %s\n", argv[i+1], strerror(errno));
+//             } else {
+//                 //TODO:输出重定向
+//                 fd[] = tfd;
+//             }
+//             i += 2;
+//         } else if(strcmp(argv[i], "<") == 0) {
+//             //TODO: 读输入文件
+//             tfd = open();
+//             if(tfd < 0) {
+//                 printf("open '%s' error: %s\n", argv[i+1], strerror(errno));
+//             } else {
+//                 //TODO:输出重定向
+//                 fd[] = tfd;
+//             }
+//             i += 2;
+//         } else {
+//             argv[j++] = argv[i++];
+//         }
+//     }
+//     argv[j] = NULL;
+//     return j;   // 新的argc
+// }
 
 
 
@@ -158,7 +192,7 @@ int execute(int argc, char** argv) {
     fd[READ_END] = STDIN_FILENO;
     fd[WRITE_END] = STDOUT_FILENO;
     // 处理重定向符，如果不做本部分内容，请注释掉process_redirect的调用
-    argc = process_redirect(argc, argv, fd);
+    // argc = process_redirect(argc, argv, fd);
     if(exec_builtin(argc, argv, fd) == 0) {
         exit(0);
     }
@@ -166,7 +200,17 @@ int execute(int argc, char** argv) {
     dup2(fd[READ_END], STDIN_FILENO);
     dup2(fd[WRITE_END], STDOUT_FILENO);
     /* TODO:运行命令与结束 */
+    if (argc <= 0 || argc >= MAX_CMD_ARG_NUM) {
+        fprintf(stderr, "Invalid number of arguments\n");
+        exit(EXIT_FAILURE);
+    }
+    argv[argc] = NULL; // execvp要求参数列表以NULL结尾
 
+    execvp(argv[0], argv);
+
+    /* 若执行到这里说明 execvp 失败 */
+    fprintf(stderr, "execvp failed\n");
+    exit(EXIT_FAILURE); 
     
 }
 
@@ -178,7 +222,9 @@ int main() {
     int cmd_count;
     while (1) {
         /* TODO: 增加打印当前目录，格式类似"shell:/home/oslab ->"，你需要改下面的printf */
-        printf("shell: -> ");
+        char path[100];
+        getcwd(path, sizeof(path));
+        printf("shell:%s ->",path);
         fflush(stdout);
 
         fgets(cmdline, 256, stdin);
@@ -201,6 +247,13 @@ int main() {
              *
              * 
              */
+            argc = split_string(commands[0]," ",argv);
+            if (argc <= 0 || argc >= MAX_CMD_ARG_NUM) {
+                fprintf(stderr, "Invalid number of arguments\n");
+                continue;
+            }
+            argv[argc] = NULL; // execp要求最后一个元素为NULL
+
             /* 在没有管道时，内建命令直接在主进程中完成，外部命令通过创建子进程完成 */
             if(exec_builtin(argc, argv, fd) == 0) {
                 continue;
@@ -211,6 +264,28 @@ int main() {
              *
              *
              */
+            pid_t child_pid = fork();
+
+            if (child_pid < 0) { 
+                fprintf(stderr, "fork failed\n");
+                continue;
+
+            } else if (child_pid == 0) {  // 子进程
+                execvp(argv[0], argv);     
+                fprintf(stderr, "exec failed\n"); // 子进程异常退出
+                exit(EXIT_FAILURE);   
+
+            } else { // 父进程
+                int status;
+                waitpid(child_pid, &status, 0);  // 等待子进程结束
+
+                if (WIFEXITED(status)) {         // 检查子进程是否正常退出
+                    int exit_status = WEXITSTATUS(status);
+                    if (exit_status != 0) {
+                        fprintf(stderr, "Command failed with exit code %d\n", exit_status);
+                    }
+                }
+            }
 
         } else if(cmd_count == 2) {     // 两个命令间的管道
             int pipefd[2];
@@ -223,9 +298,9 @@ int main() {
             int pid = fork();
             if(pid == 0) {  
                 /*TODO:子进程1 将标准输出重定向到管道，注意这里数组的下标被挖空了要补全*/
-                close(pipefd[]);
-                dup2(pipefd[], STDOUT_FILENO);
-                close(pipefd[]);
+                close(pipefd[0]);
+                dup2(pipefd[1], STDOUT_FILENO);
+                close(pipefd[1]);
                 /* 
                     在使用管道时，为了可以并发运行，所以内建命令也在子进程中运行
                     因此我们用了一个封装好的execute函数
@@ -243,9 +318,9 @@ int main() {
             pid = fork();
             if(pid == 0) {  
                 /* TODO:子进程2 将标准输入重定向到管道，注意这里数组的下标被挖空了要补全 */
-                close(pipefd[]);
-                dup2(pipefd[], STDIN_FILENO);
-                close(pipefd[]);
+                close(pipefd[1]);
+                dup2(pipefd[0], STDIN_FILENO);
+                close(pipefd[0]);
 
                 char *argv[MAX_CMD_ARG_NUM];
                 /* TODO:处理参数，分出命令名和参数，并使用execute运行
@@ -254,6 +329,9 @@ int main() {
                  *
                  * 
                  */
+                int argc = split_string(commands[1], " ", argv);
+                execute(argc, argv);
+                exit(EXIT_FAILURE);
             }
             close(pipefd[WRITE_END]);
             close(pipefd[READ_END]);
@@ -261,7 +339,7 @@ int main() {
             
             while (wait(NULL) > 0);
         } else {    // 选做：三个以上的命令
-            int read_fd;    // 上一个管道的读端口（出口）
+            int read_fd = STDIN_FILENO;    // 上一个管道的读端口（出口）
             for(int i=0; i<cmd_count; i++) {
                 int pipefd[2];
                 /* TODO:创建管道，n条命令只需要n-1个管道，所以有一次循环中是不用创建管道的
@@ -269,6 +347,14 @@ int main() {
                  *
                  * 
                  */
+                int is_last_cmd = (i == cmd_count - 1); 
+                if (!is_last_cmd) { 
+                    if (pipe(pipefd) < 0) { 
+                        perror("pipe error");
+                        exit(EXIT_FAILURE);
+                    }
+                }
+
                 int pid = fork();
                 if(pid == 0) {
                     /* TODO:除了最后一条命令外，都将标准输出重定向到当前管道入口
@@ -276,19 +362,32 @@ int main() {
                      *
                      * 
                      */
+                    if (!is_last_cmd) {
+                        close(pipefd[0]); // 关闭读端
+                        dup2(pipefd[1], STDOUT_FILENO); // 输出重定向到当前管道写端
+                        close(pipefd[1]); 
+                    }
 
                     /* TODO:除了第一条命令外，都将标准输入重定向到上一个管道出口
                      *
                      *
                      * 
                      */
-
+                    if (i != 0) { 
+                        dup2(read_fd, STDIN_FILENO);  // 输入来自上一个管道读端
+                        close(read_fd);               // 关闭原始读端
+                    }
+                    
                     /* TODO:处理参数，分出命令名和参数，并使用execute运行
                      * 在使用管道时，为了可以并发运行，所以内建命令也在子进程中运行
                      * 因此我们用了一个封装好的execute函数
                      * 
                      * 
                      */
+                    char *argv[MAX_CMD_ARG_NUM];
+                    int argc = split_string(commands[i], " ", argv);
+                    execute(argc, argv);
+                    exit(255);
                 }
                 /* 父进程除了第一条命令，都需要关闭当前命令用完的上一个管道读端口 
                  * 父进程除了最后一条命令，都需要保存当前命令的管道读端口 
@@ -301,13 +400,21 @@ int main() {
                 *
                 *
                 */
+                if (i != 0) { 
+                    close(read_fd); 
+                } 
+
                 /* TODO:出了第最后一条命令外，父进程保存当前命令的管道读端口
                 *
                 *
                 */
+                if (!is_last_cmd) { 
+                    close(pipefd[1]);         
+                    read_fd = pipefd[0];      // 保存读端供下一条命令使用
+                }
             }
             // TODO:等待所有子进程结束
-
+            while (wait(NULL) > 0); 
         }
 
     }
