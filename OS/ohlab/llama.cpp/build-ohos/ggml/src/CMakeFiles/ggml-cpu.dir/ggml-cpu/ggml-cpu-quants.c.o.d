@@ -1,0 +1,32 @@
+ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu-quants.c.o: \
+  /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/ggml/src/ggml-cpu/ggml-cpu-quants.c \
+  /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/ggml/src/./ggml-common.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include/stdint.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/stdint.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos/bits/alltypes.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos/bits/stdint.h \
+  /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/ggml/src/./ggml-quants.h \
+  /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/ggml/src/../include/ggml.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include/stdbool.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include/stddef.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include/__stddef_max_align_t.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/stdio.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/features.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/fortify/stdio.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include/stdarg.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/fortify/fortify.h \
+  /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/ggml/src/ggml-cpu/ggml-cpu-quants.h \
+  /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/ggml/src/./ggml-impl.h \
+  /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/ggml/src/../include/gguf.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/assert.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/math.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/stdlib.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/fortify/stdlib.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/string.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/fortify/string.h \
+  /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/ggml/src/ggml-cpu/ggml-cpu-impl.h \
+  /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/ggml/src/../include/ggml-cpu.h \
+  /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/ggml/src/../include/ggml-backend.h \
+  /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/ggml/src/../include/ggml-alloc.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include/float.h \
+  /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/float.h

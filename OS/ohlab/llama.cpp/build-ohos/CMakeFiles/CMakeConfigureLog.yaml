@@ -1,0 +1,647 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The target system is: OHOS - 1 - arm
+      The host system is: Linux - 6.11.0-25-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang 
+      Build flags: -fdata-sections;-ffunction-sections;-funwind-tables;-fstack-protector-strong;-no-canonical-prefixes;-fno-addrsig;-Wa,--noexecstack;-Wformat;-Werror=format-security;-march=armv7a;-D__MUSL__
+      Id flags: -c;--target=arm-linux-ohos 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is Clang, found in:
+        /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/3.28.2/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang++ 
+      Build flags: -fdata-sections;-ffunction-sections;-funwind-tables;-fstack-protector-strong;-no-canonical-prefixes;-fno-addrsig;-Wa,--noexecstack;-Wformat;-Werror=format-security;-march=armv7a;-Wno-c++11-narrowing;-D__MUSL__
+      Id flags: -c;--target=arm-linux-ohos 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/3.28.2/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-L2OlDh"
+      binary: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-L2OlDh"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_CXX_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_C_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_C_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_C_FLAGS: "-fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -march=armv7a  -D__MUSL__"
+      CMAKE_C_FLAGS_DEBUG: "-O0 -g -fno-limit-debug-info "
+      CMAKE_EXE_LINKER_FLAGS: "--rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections "
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "/home/charming/lab/USTC-class/OS/ohlab/native/sysroot"
+      OHOS_ARCH: "armeabi-v7a"
+      OHOS_SDK_NATIVE: "/home/charming/lab/USTC-class/OS/ohlab/native"
+      OHOS_TOOLCHAIN: "clang"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-L2OlDh'
+        
+        Run Build Command(s): /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_cbb4f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_cbb4f.dir/build.make CMakeFiles/cmTC_cbb4f.dir/build
+        gmake[1]: Entering directory '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-L2OlDh'
+        Building C object CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot   -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -march=armv7a  -D__MUSL__  -fPIE   -v -MD -MT CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o -c /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        OHOS (dev) clang version 15.0.4 (llvm-project 5bb79814d8b88e9156d2b1118c9b45d81724fec4)
+        Target: arm-unknown-linux-ohos
+        Thread model: posix
+        InstalledDir: /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin
+        clang: warning: argument unused during compilation: '--gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm' [-Wunused-command-line-argument]
+         (in-process)
+         "/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang" -cc1 -triple armv7-unknown-linux-ohos -emit-obj -mrelax-all --mrelax-relocations -mnoexecstack -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=1 -target-cpu generic -target-feature +soft-float -target-feature +soft-float-abi -target-feature -vfp2 -target-feature -vfp2sp -target-feature -vfp3 -target-feature -vfp3d16 -target-feature -vfp3d16sp -target-feature -vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature -fp64 -target-feature -d32 -target-feature -neon -target-feature -sha2 -target-feature -aes -target-feature -dotprod -target-feature -fp16fml -target-feature -bf16 -target-feature -mve -target-feature -mve.fp -target-feature -fpregs -target-abi aapcs-linux -msoft-float -mfloat-abi soft -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-L2OlDh -resource-dir /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4 -dependency-file CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o -sys-header-deps -D __MUSL__ -isysroot /home/charming/lab/USTC-class/OS/ohlab/native/sysroot -internal-isystem /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include -internal-externc-isystem /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos -internal-externc-isystem /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/include -internal-externc-isystem /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include -Wformat -fdebug-compilation-dir=/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-L2OlDh -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o -x c /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 15.0.4 based upon LLVM 15.0.4 default target x86_64-unknown-linux-gnu
+        ignoring nonexistent directory "/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include
+         /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos
+         /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include
+        End of search list.
+        Linking C executable cmTC_cbb4f
+        /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cbb4f.dir/link.txt --verbose=1
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -march=armv7a  -D__MUSL__  --rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections  -v CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o -o cmTC_cbb4f 
+        OHOS (dev) clang version 15.0.4 (llvm-project 5bb79814d8b88e9156d2b1118c9b45d81724fec4)
+        Target: arm-unknown-linux-ohos
+        Thread model: posix
+        InstalledDir: /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin
+         "/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/ld.lld" --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -pie -EL -z now -z relro -z max-page-size=4096 --hash-style=gnu --hash-style=both --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /lib/ld-musl-arm.so.1 -o cmTC_cbb4f /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/Scrt1.o /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crti.o /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtbegin.o -L/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos -L/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/ -L/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../lib/arm-linux-ohos/ -L/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/ --build-id=sha1 --warn-shared-textrel --fatal-warnings -lunwind --no-undefined -z noexecstack --gc-sections CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a -l:libunwind.a -lc /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a -l:libunwind.a /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtend.o /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crtn.o
+        gmake[1]: Leaving directory '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-L2OlDh'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include]
+          add: [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos]
+          add: [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include]
+        end of search list found
+        collapse include dir [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include]
+        collapse include dir [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos]
+        collapse include dir [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include]
+        implicit include dirs: [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include;/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos;/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-L2OlDh']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_cbb4f/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_cbb4f.dir/build.make CMakeFiles/cmTC_cbb4f.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-L2OlDh']
+        ignore line: [Building C object CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot   -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa --noexecstack -Wformat -march=armv7a  -D__MUSL__  -fPIE   -v -MD -MT CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o -c /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [OHOS (dev) clang version 15.0.4 (llvm-project 5bb79814d8b88e9156d2b1118c9b45d81724fec4)]
+        ignore line: [Target: arm-unknown-linux-ohos]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin]
+        ignore line: [clang: warning: argument unused during compilation: '--gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm' [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang" -cc1 -triple armv7-unknown-linux-ohos -emit-obj -mrelax-all --mrelax-relocations -mnoexecstack -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=1 -target-cpu generic -target-feature +soft-float -target-feature +soft-float-abi -target-feature -vfp2 -target-feature -vfp2sp -target-feature -vfp3 -target-feature -vfp3d16 -target-feature -vfp3d16sp -target-feature -vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature -fp64 -target-feature -d32 -target-feature -neon -target-feature -sha2 -target-feature -aes -target-feature -dotprod -target-feature -fp16fml -target-feature -bf16 -target-feature -mve -target-feature -mve.fp -target-feature -fpregs -target-abi aapcs-linux -msoft-float -mfloat-abi soft -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-L2OlDh -resource-dir /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4 -dependency-file CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o -sys-header-deps -D __MUSL__ -isysroot /home/charming/lab/USTC-class/OS/ohlab/native/sysroot -internal-isystem /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include -internal-externc-isystem /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos -internal-externc-isystem /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/include -internal-externc-isystem /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include -Wformat -fdebug-compilation-dir=/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-L2OlDh -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o -x c /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 15.0.4 based upon LLVM 15.0.4 default target x86_64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include]
+        ignore line: [ /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos]
+        ignore line: [ /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking C executable cmTC_cbb4f]
+        ignore line: [/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cbb4f.dir/link.txt --verbose=1]
+        ignore line: [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -march=armv7a  -D__MUSL__  --rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections  -v CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o -o cmTC_cbb4f ]
+        ignore line: [OHOS (dev) clang version 15.0.4 (llvm-project 5bb79814d8b88e9156d2b1118c9b45d81724fec4)]
+        ignore line: [Target: arm-unknown-linux-ohos]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin]
+        link line: [ "/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/ld.lld" --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -pie -EL -z now -z relro -z max-page-size=4096 --hash-style=gnu --hash-style=both --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /lib/ld-musl-arm.so.1 -o cmTC_cbb4f /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/Scrt1.o /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crti.o /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtbegin.o -L/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos -L/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/ -L/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../lib/arm-linux-ohos/ -L/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/ --build-id=sha1 --warn-shared-textrel --fatal-warnings -lunwind --no-undefined -z noexecstack --gc-sections CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a -l:libunwind.a -lc /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a -l:libunwind.a /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtend.o /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crtn.o]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/ld.lld] ==> ignore
+          arg [--sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-EL] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-zmax-page-size=4096] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--hash-style=both] ==> ignore
+          arg [--enable-new-dtags] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [armelf_linux_eabi] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-musl-arm.so.1] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_cbb4f] ==> ignore
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/Scrt1.o] ==> obj [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/Scrt1.o]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crti.o] ==> obj [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crti.o]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtbegin.o] ==> obj [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtbegin.o]
+          arg [-L/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos] ==> dir [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos]
+          arg [-L/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/] ==> dir [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/]
+          arg [-L/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../lib/arm-linux-ohos/] ==> dir [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../lib/arm-linux-ohos/]
+          arg [-L/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/] ==> dir [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/]
+          arg [--build-id=sha1] ==> ignore
+          arg [--warn-shared-textrel] ==> ignore
+          arg [--fatal-warnings] ==> ignore
+          arg [-lunwind] ==> lib [unwind]
+          arg [--no-undefined] ==> ignore
+          arg [-znoexecstack] ==> ignore
+          arg [--gc-sections] ==> ignore
+          arg [CMakeFiles/cmTC_cbb4f.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a] ==> lib [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [-lc] ==> lib [c]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a] ==> lib [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtend.o] ==> obj [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtend.o]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crtn.o] ==> obj [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crtn.o]
+        remove lib [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a]
+        remove lib [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a]
+        collapse library dir [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos]
+        collapse library dir [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib]
+        collapse library dir [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../lib/arm-linux-ohos/] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/arm-linux-ohos]
+        collapse library dir [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos]
+        implicit libs: [unwind;-l:libunwind.a;c;-l:libunwind.a]
+        implicit objs: [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/Scrt1.o;/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crti.o;/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtbegin.o;/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtend.o;/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crtn.o]
+        implicit dirs: [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos;/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib;/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/arm-linux-ohos;/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-U0aSg8"
+      binary: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-U0aSg8"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_CXX_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_CXX_FLAGS: "-fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -march=armv7a  -Wno-c++11-narrowing -D__MUSL__"
+      CMAKE_CXX_FLAGS_DEBUG: "-O0 -g -fno-limit-debug-info "
+      CMAKE_C_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_C_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_EXE_LINKER_FLAGS: "--rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections "
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "/home/charming/lab/USTC-class/OS/ohlab/native/sysroot"
+      OHOS_ARCH: "armeabi-v7a"
+      OHOS_SDK_NATIVE: "/home/charming/lab/USTC-class/OS/ohlab/native"
+      OHOS_TOOLCHAIN: "clang"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-U0aSg8'
+        
+        Run Build Command(s): /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_70616/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_70616.dir/build.make CMakeFiles/cmTC_70616.dir/build
+        gmake[1]: Entering directory '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-U0aSg8'
+        Building CXX object CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang++ --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot   -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -march=armv7a  -Wno-c++11-narrowing -D__MUSL__  -fPIE   -v -MD -MT CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o -c /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        OHOS (dev) clang version 15.0.4 (llvm-project 5bb79814d8b88e9156d2b1118c9b45d81724fec4)
+        Target: arm-unknown-linux-ohos
+        Thread model: posix
+        InstalledDir: /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin
+        clang++: warning: argument unused during compilation: '--gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm' [-Wunused-command-line-argument]
+         (in-process)
+         "/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang++" -cc1 -triple armv7-unknown-linux-ohos -emit-obj -mrelax-all --mrelax-relocations -mnoexecstack -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=1 -target-cpu generic -target-feature +soft-float -target-feature +soft-float-abi -target-feature -vfp2 -target-feature -vfp2sp -target-feature -vfp3 -target-feature -vfp3d16 -target-feature -vfp3d16sp -target-feature -vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature -fp64 -target-feature -d32 -target-feature -neon -target-feature -sha2 -target-feature -aes -target-feature -dotprod -target-feature -fp16fml -target-feature -bf16 -target-feature -mve -target-feature -mve.fp -target-feature -fpregs -target-abi aapcs-linux -msoft-float -mfloat-abi soft -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-U0aSg8 -resource-dir /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4 -dependency-file CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D __MUSL__ -isysroot /home/charming/lab/USTC-class/OS/ohlab/native/sysroot -internal-isystem /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../include/libcxx-ohos/include/c++/v1 -internal-isystem /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include -internal-externc-isystem /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos -internal-externc-isystem /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/include -internal-externc-isystem /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include -Wformat -Wno-c++11-narrowing -fdeprecated-macro -fdebug-compilation-dir=/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-U0aSg8 -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 15.0.4 based upon LLVM 15.0.4 default target x86_64-unknown-linux-gnu
+        ignoring nonexistent directory "/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../include/libcxx-ohos/include/c++/v1
+         /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include
+         /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos
+         /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include
+        End of search list.
+        Linking CXX executable cmTC_70616
+        /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70616.dir/link.txt --verbose=1
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang++ --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -march=armv7a  -Wno-c++11-narrowing -D__MUSL__  --rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections  -v CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_70616 
+        OHOS (dev) clang version 15.0.4 (llvm-project 5bb79814d8b88e9156d2b1118c9b45d81724fec4)
+        Target: arm-unknown-linux-ohos
+        Thread model: posix
+        InstalledDir: /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin
+         "/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/ld.lld" --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -pie -EL -z now -z relro -z max-page-size=4096 --hash-style=gnu --hash-style=both --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /lib/ld-musl-arm.so.1 -o cmTC_70616 /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/Scrt1.o /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crti.o /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtbegin.o -L/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos -L/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/ -L/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../lib/arm-linux-ohos/ -L/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/ --build-id=sha1 --warn-shared-textrel --fatal-warnings -lunwind --no-undefined -z noexecstack --gc-sections CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lc++abi -lunwind -lm /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a -l:libunwind.a -lc /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a -l:libunwind.a /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtend.o /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crtn.o
+        gmake[1]: Leaving directory '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-U0aSg8'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../include/libcxx-ohos/include/c++/v1]
+          add: [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include]
+          add: [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos]
+          add: [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include]
+        end of search list found
+        collapse include dir [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../include/libcxx-ohos/include/c++/v1] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/include/libcxx-ohos/include/c++/v1]
+        collapse include dir [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include]
+        collapse include dir [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos]
+        collapse include dir [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include]
+        implicit include dirs: [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/include/libcxx-ohos/include/c++/v1;/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include;/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos;/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-U0aSg8']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_70616/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_70616.dir/build.make CMakeFiles/cmTC_70616.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-U0aSg8']
+        ignore line: [Building CXX object CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang++ --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot   -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa --noexecstack -Wformat -march=armv7a  -Wno-c++11-narrowing -D__MUSL__  -fPIE   -v -MD -MT CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o -c /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [OHOS (dev) clang version 15.0.4 (llvm-project 5bb79814d8b88e9156d2b1118c9b45d81724fec4)]
+        ignore line: [Target: arm-unknown-linux-ohos]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin]
+        ignore line: [clang++: warning: argument unused during compilation: '--gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm' [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang++" -cc1 -triple armv7-unknown-linux-ohos -emit-obj -mrelax-all --mrelax-relocations -mnoexecstack -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=1 -target-cpu generic -target-feature +soft-float -target-feature +soft-float-abi -target-feature -vfp2 -target-feature -vfp2sp -target-feature -vfp3 -target-feature -vfp3d16 -target-feature -vfp3d16sp -target-feature -vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature -fp64 -target-feature -d32 -target-feature -neon -target-feature -sha2 -target-feature -aes -target-feature -dotprod -target-feature -fp16fml -target-feature -bf16 -target-feature -mve -target-feature -mve.fp -target-feature -fpregs -target-abi aapcs-linux -msoft-float -mfloat-abi soft -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-U0aSg8 -resource-dir /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4 -dependency-file CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D __MUSL__ -isysroot /home/charming/lab/USTC-class/OS/ohlab/native/sysroot -internal-isystem /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../include/libcxx-ohos/include/c++/v1 -internal-isystem /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include -internal-externc-isystem /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos -internal-externc-isystem /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/include -internal-externc-isystem /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include -Wformat -Wno-c++11-narrowing -fdeprecated-macro -fdebug-compilation-dir=/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-U0aSg8 -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 15.0.4 based upon LLVM 15.0.4 default target x86_64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../include/libcxx-ohos/include/c++/v1]
+        ignore line: [ /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/include]
+        ignore line: [ /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include/arm-linux-ohos]
+        ignore line: [ /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_70616]
+        ignore line: [/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70616.dir/link.txt --verbose=1]
+        ignore line: [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang++ --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -march=armv7a  -Wno-c++11-narrowing -D__MUSL__  --rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections  -v CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_70616 ]
+        ignore line: [OHOS (dev) clang version 15.0.4 (llvm-project 5bb79814d8b88e9156d2b1118c9b45d81724fec4)]
+        ignore line: [Target: arm-unknown-linux-ohos]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin]
+        link line: [ "/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/ld.lld" --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -pie -EL -z now -z relro -z max-page-size=4096 --hash-style=gnu --hash-style=both --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /lib/ld-musl-arm.so.1 -o cmTC_70616 /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/Scrt1.o /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crti.o /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtbegin.o -L/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos -L/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/ -L/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../lib/arm-linux-ohos/ -L/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/ --build-id=sha1 --warn-shared-textrel --fatal-warnings -lunwind --no-undefined -z noexecstack --gc-sections CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lc++abi -lunwind -lm /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a -l:libunwind.a -lc /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a -l:libunwind.a /home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtend.o /home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crtn.o]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/ld.lld] ==> ignore
+          arg [--sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-EL] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-zmax-page-size=4096] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--hash-style=both] ==> ignore
+          arg [--enable-new-dtags] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [armelf_linux_eabi] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-musl-arm.so.1] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_70616] ==> ignore
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/Scrt1.o] ==> obj [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/Scrt1.o]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crti.o] ==> obj [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crti.o]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtbegin.o] ==> obj [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtbegin.o]
+          arg [-L/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos] ==> dir [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos]
+          arg [-L/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/] ==> dir [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/]
+          arg [-L/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../lib/arm-linux-ohos/] ==> dir [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../lib/arm-linux-ohos/]
+          arg [-L/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/] ==> dir [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/]
+          arg [--build-id=sha1] ==> ignore
+          arg [--warn-shared-textrel] ==> ignore
+          arg [--fatal-warnings] ==> ignore
+          arg [-lunwind] ==> lib [unwind]
+          arg [--no-undefined] ==> ignore
+          arg [-znoexecstack] ==> ignore
+          arg [--gc-sections] ==> ignore
+          arg [CMakeFiles/cmTC_70616.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lc++abi] ==> lib [c++abi]
+          arg [-lunwind] ==> lib [unwind]
+          arg [-lm] ==> lib [m]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a] ==> lib [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [-lc] ==> lib [c]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a] ==> lib [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a]
+          arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtend.o] ==> obj [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtend.o]
+          arg [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crtn.o] ==> obj [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crtn.o]
+        remove lib [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a]
+        remove lib [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/libclang_rt.builtins.a]
+        collapse library dir [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos]
+        collapse library dir [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib]
+        collapse library dir [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/../lib/arm-linux-ohos/] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/arm-linux-ohos]
+        collapse library dir [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/] ==> [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos]
+        implicit libs: [unwind;c++;c++abi;unwind;m;-l:libunwind.a;c;-l:libunwind.a]
+        implicit objs: [/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/Scrt1.o;/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crti.o;/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtbegin.o;/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos/clang_rt.crtend.o;/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos/crtn.o]
+        implicit dirs: [/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/clang/15.0.4/lib/arm-linux-ohos;/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib;/home/charming/lab/USTC-class/OS/ohlab/native/llvm/lib/arm-linux-ohos;/home/charming/lab/USTC-class/OS/ohlab/native/sysroot/usr/lib/arm-linux-ohos]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "ggml/CMakeLists.txt:227 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-siU7x4"
+      binary: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-siU7x4"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_CXX_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_C_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_C_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_C_FLAGS: "-fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -D__MUSL__"
+      CMAKE_C_FLAGS_DEBUG: "-O0 -g -fno-limit-debug-info "
+      CMAKE_EXE_LINKER_FLAGS: "--rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections "
+      CMAKE_MODULE_PATH: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/cmake/"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "/home/charming/lab/USTC-class/OS/ohlab/native/sysroot"
+      OHOS_ARCH: "armeabi-v7a"
+      OHOS_SDK_NATIVE: "/home/charming/lab/USTC-class/OS/ohlab/native"
+      OHOS_TOOLCHAIN: "clang"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-siU7x4'
+        
+        Run Build Command(s): /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2e18a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2e18a.dir/build.make CMakeFiles/cmTC_2e18a.dir/build
+        gmake[1]: 进入目录“/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-siU7x4”
+        Building C object CMakeFiles/cmTC_2e18a.dir/src.c.o
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -D__MUSL__  -std=gnu11 -fPIE -MD -MT CMakeFiles/cmTC_2e18a.dir/src.c.o -MF CMakeFiles/cmTC_2e18a.dir/src.c.o.d -o CMakeFiles/cmTC_2e18a.dir/src.c.o -c /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-siU7x4/src.c
+        clang: warning: argument unused during compilation: '--gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm' [-Wunused-command-line-argument]
+        /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-siU7x4/src.c:13:3: warning: call to undeclared function 'pthread_cancel'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+          pthread_cancel(thread);
+          ^
+        1 warning generated.
+        Linking C executable cmTC_2e18a
+        /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e18a.dir/link.txt --verbose=1
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -D__MUSL__  --rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections   CMakeFiles/cmTC_2e18a.dir/src.c.o -o cmTC_2e18a  -lm 
+        ld.lld: error: undefined symbol: pthread_cancel
+        >>> referenced by src.c
+        >>>               CMakeFiles/cmTC_2e18a.dir/src.c.o:(main)
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_2e18a.dir/build.make:100：cmTC_2e18a] 错误 1
+        gmake[1]: 离开目录“/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-siU7x4”
+        gmake: *** [Makefile:127：cmTC_2e18a/fast] 错误 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/FindThreads.cmake:136 (try_compile)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/FindThreads.cmake:169 (_threads_check_flag_pthread)"
+      - "ggml/CMakeLists.txt:227 (find_package)"
+    checks:
+      - "Check if compiler accepts -pthread"
+    directories:
+      source: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-PYKSme"
+      binary: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-PYKSme"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_CXX_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_C_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_C_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_C_FLAGS: "-fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -D__MUSL__"
+      CMAKE_C_FLAGS_DEBUG: "-O0 -g -fno-limit-debug-info "
+      CMAKE_EXE_LINKER_FLAGS: "--rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections "
+      CMAKE_MODULE_PATH: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/cmake/"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "/home/charming/lab/USTC-class/OS/ohlab/native/sysroot"
+      OHOS_ARCH: "armeabi-v7a"
+      OHOS_SDK_NATIVE: "/home/charming/lab/USTC-class/OS/ohlab/native"
+      OHOS_TOOLCHAIN: "clang"
+    buildResult:
+      variable: "THREADS_HAVE_PTHREAD_ARG"
+      cached: true
+      stdout: |
+        Change Dir: '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-PYKSme'
+        
+        Run Build Command(s): /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_90653/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_90653.dir/build.make CMakeFiles/cmTC_90653.dir/build
+        gmake[1]: 进入目录“/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-PYKSme”
+        Building C object CMakeFiles/cmTC_90653.dir/CheckForPthreads.c.o
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot   -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -D__MUSL__  -std=gnu11 -fPIE -MD -MT CMakeFiles/cmTC_90653.dir/CheckForPthreads.c.o -MF CMakeFiles/cmTC_90653.dir/CheckForPthreads.c.o.d -o CMakeFiles/cmTC_90653.dir/CheckForPthreads.c.o -c /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-PYKSme/CheckForPthreads.c
+        clang: warning: argument unused during compilation: '--gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm' [-Wunused-command-line-argument]
+        Linking C executable cmTC_90653
+        /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90653.dir/link.txt --verbose=1
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -D__MUSL__  --rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections   CMakeFiles/cmTC_90653.dir/CheckForPthreads.c.o -o cmTC_90653  -pthread -lm 
+        gmake[1]: 离开目录“/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-PYKSme”
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "ggml/src/ggml-cpu/CMakeLists.txt:95 (check_cxx_compiler_flag)"
+      - "ggml/src/CMakeLists.txt:302 (ggml_add_cpu_backend_variant_impl)"
+    checks:
+      - "Performing Test GGML_COMPILER_SUPPORTS_FP16_FORMAT_I3E"
+    directories:
+      source: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-ttF4wL"
+      binary: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-ttF4wL"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_CXX_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_CXX_FLAGS: "-fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -Wno-c++11-narrowing -D__MUSL__"
+      CMAKE_CXX_FLAGS_DEBUG: "-O0 -g -fno-limit-debug-info "
+      CMAKE_C_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_C_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_EXE_LINKER_FLAGS: "--rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections "
+      CMAKE_MODULE_PATH: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/cmake/"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "/home/charming/lab/USTC-class/OS/ohlab/native/sysroot"
+      OHOS_ARCH: "armeabi-v7a"
+      OHOS_SDK_NATIVE: "/home/charming/lab/USTC-class/OS/ohlab/native"
+      OHOS_TOOLCHAIN: "clang"
+    buildResult:
+      variable: "GGML_COMPILER_SUPPORTS_FP16_FORMAT_I3E"
+      cached: true
+      stdout: |
+        Change Dir: '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-ttF4wL'
+        
+        Run Build Command(s): /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_464cb/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_464cb.dir/build.make CMakeFiles/cmTC_464cb.dir/build
+        gmake[1]: Entering directory '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-ttF4wL'
+        Building CXX object CMakeFiles/cmTC_464cb.dir/src.cxx.o
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang++ --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -DGGML_COMPILER_SUPPORTS_FP16_FORMAT_I3E  -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -Wno-c++11-narrowing -D__MUSL__  -std=gnu++17 -fPIE   -mfp16-format=ieee -MD -MT CMakeFiles/cmTC_464cb.dir/src.cxx.o -MF CMakeFiles/cmTC_464cb.dir/src.cxx.o.d -o CMakeFiles/cmTC_464cb.dir/src.cxx.o -c /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-ttF4wL/src.cxx
+        clang++: error: unknown argument: '-mfp16-format=ieee'
+        gmake[1]: *** [CMakeFiles/cmTC_464cb.dir/build.make:79: CMakeFiles/cmTC_464cb.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-ttF4wL'
+        gmake: *** [Makefile:127: cmTC_464cb/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "common/CMakeLists.txt:3 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-4iRxcM"
+      binary: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-4iRxcM"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_CXX_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_C_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_C_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_C_FLAGS: "-fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -D__MUSL__"
+      CMAKE_C_FLAGS_DEBUG: "-O0 -g -fno-limit-debug-info "
+      CMAKE_EXE_LINKER_FLAGS: "--rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections "
+      CMAKE_MODULE_PATH: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/cmake/"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "/home/charming/lab/USTC-class/OS/ohlab/native/sysroot"
+      OHOS_ARCH: "armeabi-v7a"
+      OHOS_SDK_NATIVE: "/home/charming/lab/USTC-class/OS/ohlab/native"
+      OHOS_TOOLCHAIN: "clang"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-4iRxcM'
+        
+        Run Build Command(s): /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_616a5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_616a5.dir/build.make CMakeFiles/cmTC_616a5.dir/build
+        gmake[1]: 进入目录“/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-4iRxcM”
+        Building C object CMakeFiles/cmTC_616a5.dir/CheckFunctionExists.c.o
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot   -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -D__MUSL__ -DCHECK_FUNCTION_EXISTS=pthread_create -fPIE -MD -MT CMakeFiles/cmTC_616a5.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_616a5.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_616a5.dir/CheckFunctionExists.c.o -c /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-4iRxcM/CheckFunctionExists.c
+        clang: warning: argument unused during compilation: '--gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm' [-Wunused-command-line-argument]
+        Linking C executable cmTC_616a5
+        /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_616a5.dir/link.txt --verbose=1
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -D__MUSL__ -DCHECK_FUNCTION_EXISTS=pthread_create --rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections   CMakeFiles/cmTC_616a5.dir/CheckFunctionExists.c.o -o cmTC_616a5  -lpthreads -lm 
+        ld.lld: error: unable to find library -lpthreads
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        gmake[1]: *** [CMakeFiles/cmTC_616a5.dir/build.make:100：cmTC_616a5] 错误 1
+        gmake[1]: 离开目录“/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-4iRxcM”
+        gmake: *** [Makefile:127：cmTC_616a5/fast] 错误 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/share/cmake-3.28/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "common/CMakeLists.txt:3 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-h0dOKR"
+      binary: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-h0dOKR"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_CXX_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_C_COMPILER_EXTERNAL_TOOLCHAIN: "/home/charming/lab/USTC-class/OS/ohlab/native/llvm"
+      CMAKE_C_COMPILER_TARGET: "arm-linux-ohos"
+      CMAKE_C_FLAGS: "-fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -D__MUSL__"
+      CMAKE_C_FLAGS_DEBUG: "-O0 -g -fno-limit-debug-info "
+      CMAKE_EXE_LINKER_FLAGS: "--rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections "
+      CMAKE_MODULE_PATH: "/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/cmake/"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+      CMAKE_SYSROOT: "/home/charming/lab/USTC-class/OS/ohlab/native/sysroot"
+      OHOS_ARCH: "armeabi-v7a"
+      OHOS_SDK_NATIVE: "/home/charming/lab/USTC-class/OS/ohlab/native"
+      OHOS_TOOLCHAIN: "clang"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-h0dOKR'
+        
+        Run Build Command(s): /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6924e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6924e.dir/build.make CMakeFiles/cmTC_6924e.dir/build
+        gmake[1]: 进入目录“/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-h0dOKR”
+        Building C object CMakeFiles/cmTC_6924e.dir/CheckFunctionExists.c.o
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot   -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -D__MUSL__ -DCHECK_FUNCTION_EXISTS=pthread_create -fPIE -MD -MT CMakeFiles/cmTC_6924e.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_6924e.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_6924e.dir/CheckFunctionExists.c.o -c /home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-h0dOKR/CheckFunctionExists.c
+        clang: warning: argument unused during compilation: '--gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm' [-Wunused-command-line-argument]
+        Linking C executable cmTC_6924e
+        /home/charming/lab/USTC-class/OS/ohlab/native/build-tools/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6924e.dir/link.txt --verbose=1
+        /home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/clang --target=arm-linux-ohos --gcc-toolchain=/home/charming/lab/USTC-class/OS/ohlab/native/llvm --sysroot=/home/charming/lab/USTC-class/OS/ohlab/native/sysroot -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -march=armv7a  -D__MUSL__ -DCHECK_FUNCTION_EXISTS=pthread_create --rtlib=compiler-rt -fuse-ld=lld -Wl,--build-id=sha1 -Wl,--warn-shared-textrel -Wl,--fatal-warnings -lunwind -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,--gc-sections   CMakeFiles/cmTC_6924e.dir/CheckFunctionExists.c.o -o cmTC_6924e  -lpthread -lm 
+        gmake[1]: 离开目录“/home/charming/lab/USTC-class/OS/ohlab/llama.cpp/build-ohos/CMakeFiles/CMakeScratch/TryCompile-h0dOKR”
+        
+      exitCode: 0
+...

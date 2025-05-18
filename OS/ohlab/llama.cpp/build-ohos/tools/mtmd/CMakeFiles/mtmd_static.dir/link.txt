@@ -1,0 +1,2 @@
+/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/llvm-ar qc libmtmd_static.a CMakeFiles/mtmd.dir/mtmd.cpp.o CMakeFiles/mtmd.dir/clip.cpp.o
+/home/charming/lab/USTC-class/OS/ohlab/native/llvm/bin/llvm-ranlib libmtmd_static.a
