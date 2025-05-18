@@ -28,6 +28,10 @@ void mem_init(void)
         调用 sbrk, 初始化 mem_start_brk、mem_brk、以及 mem_max_addr
         此处增长堆空间大小为 MAX_HEAP
     */
+    mem_start_brk = (char *)sbrk(MAX_HEAP); 
+    mem_brk = mem_start_brk; 
+    mem_max_addr = (char *)sbrk(0); 
+    return; 
 }
 
 /* 
@@ -52,9 +56,7 @@ void mem_reset_brk()
  *    this model, the heap cannot be shrunk.
  */
 void *mem_sbrk(int incr) 
-{
-    char *old_brk = mem_brk;
-    
+{   
     /*
         TODO:
             模拟堆增长
@@ -65,11 +67,17 @@ void *mem_sbrk(int incr)
         2. 若 mem_brk + incr 超过实际的 mem_max_addr 值，需要调用 sbrk 为内存分配器掌管的内存扩容
         3. 每次调用 sbrk 时， mem_max_addr 增量以 MAXHEAP对齐
     */
-    
-    
-
-    
-    return (void *)old_brk;
+    if(mem_max_addr == NULL) 
+        mem_init(); 
+    char *old_brk = mem_brk; 
+    if(mem_brk + incr <= mem_max_addr) { 
+        mem_brk = mem_brk + incr; 
+        return (void *)old_brk;
+    } else {
+        sbrk(MAX_HEAP); 
+        mem_max_addr = (char *)sbrk(0); 
+        return mem_sbrk(incr);
+    }
 }
 
 /*

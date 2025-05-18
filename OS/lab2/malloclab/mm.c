@@ -95,7 +95,7 @@ void mm_check(const char * function, char* bp);
 size_t user_malloc_size = 0;
 size_t heap_size = 0;
 double get_utilization() {
-    return 0; 
+    return ((double)user_malloc_size) / ((double)heap_size); 
 }
 /* 
  * mm_init - initialize the malloc package.
@@ -180,6 +180,7 @@ void mm_free(void *bp)
     PUT(head_next_bp, PACK_PREV_ALLOC(GET(head_next_bp), 0));
 
     coalesce(bp);
+    user_malloc_size = user_malloc_size - size + WSIZE;
 }
 
 /*
@@ -216,6 +217,8 @@ static void *extend_heap(size_t words)
     if ((long)(bp = mem_sbrk(size)) == -1)
         return NULL;
     
+    heap_size = heap_size + size;
+
     PUT(HDRP(bp), PACK(size, prev_alloc, 0)); /*last free block*/
     PUT(FTRP(bp), PACK(size, prev_alloc, 0));
 
@@ -236,19 +239,40 @@ static void *coalesce(void *bp)
     */
     if (prev_alloc && next_alloc) /* 前后都是已分配的块 */
     {
-       
+        PUT(HDRP(bp), PACK(size, 1, 0)); 
+        add_to_free_list(bp); 
+        PUT(FTRP(bp), PACK(size, 1, 0));
     }
     else if (prev_alloc && !next_alloc) /*前块已分配，后块空闲*/
     {
-        
+        size_t size_i = GET_SIZE(HDRP(NEXT_BLKP(bp))); 
+        delete_from_free_list(NEXT_BLKP(bp));  
+
+        PUT(HDRP(bp), PACK(size + size_i, 1, 0)); 
+        add_to_free_list(bp);  
+        PUT(FTRP(bp), PACK(size + size_i, 1, 0));
     }
     else if (!prev_alloc && next_alloc) /*前块空闲，后块已分配*/
     {
-        
+        size_t size_i = GET_SIZE(HDRP(PREV_BLKP(bp))); 
+        delete_from_free_list(PREV_BLKP(bp)); 
+
+        bp = PREV_BLKP(bp);  
+        PUT(HDRP(bp), PACK(size_i + size, 1, 0)); 
+        add_to_free_list(bp);  
+        PUT(FTRP(bp), PACK(size_i + size, 1, 0));
     }
     else /*前后都是空闲块*/
     {
-        
+        size_t size_i = GET_SIZE(HDRP(PREV_BLKP(bp))); 
+        size_t size_j = GET_SIZE(HDRP(NEXT_BLKP(bp))); 
+        delete_from_free_list(PREV_BLKP(bp)); 
+        delete_from_free_list(NEXT_BLKP(bp)); 
+
+         bp = PREV_BLKP(bp); 
+        PUT(HDRP(bp), PACK(size + size_i + size_j, 1, 0));
+        add_to_free_list(bp); 
+        PUT(FTRP(bp), PACK(size + size_i + size_j, 1, 0));
     }
     // mm_check(__FUNCTION__, bp);
     return bp;
@@ -264,7 +288,18 @@ static void *find_fit_first(size_t asize)
         
         HINT: asize 已经计算了块头部的大小
     */
-   return NULL; // 换成实际返回值
+    size_t p = (size_t)free_listp; 
+    size_t size; 
+    while (p) 
+        { 
+    size = GET_SIZE(HDRP(p)); 
+    if (size >= asize) 
+    return (void *)p;     
+    else 
+                p = GET_SUCC(p); 
+        } 
+
+    return NULL; // 换成实际返回值
 }
 
 #else
@@ -276,8 +311,22 @@ static void* find_fit_best(size_t asize) {
         
         HINT: asize 已经计算了块头部的大小
     */
-    
-    return NULL; // 换成实际返回值
+    size_t p = (size_t)free_listp, p_t = (size_t)NULL; 
+    size_t size, size_t = 0; 
+    while (p) { 
+        size = GET_SIZE(HDRP(p)); 
+        if (size == asize) 
+        return (void *)p; 
+        if (size > asize) { 
+            if ((size_t == 0) || (size < size_t)) {
+                size_t = size; 
+                p_t = p; 
+            } 
+        } 
+            p = GET_SUCC(p); 
+    } 
+
+    return (void *)p_t; // 换成实际返回值 
 }
 #endif
 
@@ -293,7 +342,25 @@ static void place(void *bp, size_t asize)
             2. 若剩余空间仍可作为一个空闲块，则原空闲块被分割为一个已分配块+一个新的空闲块
             3. 空闲块的最小大小已经 #define，或者根据自己的理解计算该值
     */
-    
+    size_t size = GET_SIZE(HDRP(bp)); 
+    delete_from_free_list(bp); 
+    if (size - asize < MIN_BLK_SIZE) { 
+        PUT(HDRP(bp), PACK(size, 1, 1)); 
+        bp = NEXT_BLKP(bp); 
+        size_t value = GET(HDRP(bp)); 
+        PUT(HDRP(bp),PACK_PREV_ALLOC(value,1)); 
+        
+        user_malloc_size = user_malloc_size + size - WSIZE;
+    } else {
+        PUT(HDRP(bp), PACK(asize, 1, 1)); 
+
+        bp = NEXT_BLKP(bp); 
+        PUT(HDRP(bp), PACK(size - asize, 1, 0)); 
+        add_to_free_list(bp); 
+        PUT(FTRP(bp), PACK(size - asize, 1, 0));
+
+        user_malloc_size = user_malloc_size + asize - WSIZE;
+    }
 
     
 }
